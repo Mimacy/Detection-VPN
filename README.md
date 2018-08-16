@@ -1,4 +1,4 @@
-# Détecter un VPN en PHP et des APIs
+# Détecter un VPN en PHP avec des APIs (j'ai pas trouvé mieux)
 
 Apprenez à détecter un VPN/Proxy/Serveur dédié/Hébergeur/BNC avec 
 - IPHub (Une clé est requise) ;
