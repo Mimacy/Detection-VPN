@@ -1,4 +1,9 @@
 <?php
+
+$key = "xxxxxxxxxxxxxxxxxxxxxxx"; // Obtenez la clé sur https://iphub.info en version Free.
+
+
+
 function getBooleanFAI($ip) {
  $host = @gethostbyaddr($ip);
  $fai = false;
@@ -28,7 +33,7 @@ $ip = gethostbyname($_SERVER["REMOTE_ADDR"]);
  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
  curl_setopt($ch, CURLOPT_URL, 'http://v2.api.iphub.info/ip/'.$ip);
- curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-Key: [Entrer la clé API ici]')); // Obtenez votre clé en vous inscrivant sur https://iphub.info
+ curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-Key: '.$key.''));
  $result = curl_exec($ch);
  curl_close($ch);
 
