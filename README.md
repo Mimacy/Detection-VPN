@@ -5,4 +5,4 @@ Apprenez à détecter un VPN/Proxy/Serveur dédié/Hébergeur/BNC avec :
 - Getipintel (Aucune clé) ;
 - Proxy.mind-media.com (Aucune clé) ;
 
-Tuto complet sur https://blog.mimacy.net/detecter-vpn-proxy-vps-serveur-dedie
+Tuto complet sur https://www.iws-france.com/detecter-vpn-proxy-vps-serveur-dedie
