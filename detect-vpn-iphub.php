@@ -1,9 +1,5 @@
 <?php
 
-$key = "xxxxxxxxxxxxxxxxxxxxxxx"; // Obtenez la clé sur https://iphub.info en version Free.
-
-
-
 function getBooleanFAI($ip) {
  $host = @gethostbyaddr($ip);
  $fai = false;
@@ -25,7 +21,7 @@ function getBooleanFAI($ip) {
 }
 
 
-// ignore les FAIs
+// ignore the French Internet Providers
 if ( getBooleanFAI($_SERVER["REMOTE_ADDR"]) == false ) {
 
 $ip = gethostbyname($_SERVER["REMOTE_ADDR"]);
@@ -33,7 +29,7 @@ $ip = gethostbyname($_SERVER["REMOTE_ADDR"]);
  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
  curl_setopt($ch, CURLOPT_URL, 'http://v2.api.iphub.info/ip/'.$ip);
- curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-Key: '.$key.''));
+ curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-Key: [Entrer la clÃ© API ici]')); // Obtenez votre clÃ© en vous inscrivant sur https://iphub.info
  $result = curl_exec($ch);
  curl_close($ch);
 
@@ -42,13 +38,13 @@ $obj = json_decode($result, true);
 $isp = $obj['isp'];
 
 if($obj['block'] == '0'){
- $block = "IP résidentielle / non classifiée (c'est-à-dire Safe IP)";
+ $block = "IP rÃ©sidentielle / non classifiÃ©e (c'est-Ã -dire Safe IP)";
  }
  else if($obj['block'] == '1'){
- $block = "Détection d'un VPN ou PROXY ou VPS ou Serveur dédié ou hébergeur hosting...";
+ $block = "DÃ©tection d'un VPN ou PROXY ou VPS ou Serveur dÃ©diÃ© ou hÃ©bergeur hosting...";
  }
  else if($obj['block'] == '2'){
- $block = "IP non résidentielle et résidentielle (avertissement, peut flagrant des personnes innocentes)";
+ $block = "IP non rÃ©sidentielle et rÃ©sidentielle (avertissement, peut flagrant des personnes innocentes)";
  }
  else {
  $block = "Connexion inconnu";
