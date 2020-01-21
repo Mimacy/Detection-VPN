@@ -2,6 +2,7 @@
 
 Apprenez à détecter un VPN/Proxy/Serveur dédié/Hébergeur/VPS avec les APIs suivantes :
 - IPHub (Une clé est requise) ;
+- IPHunter (Une clé est requise) ;
 - Getipintel (Aucune clé) ;
 - Blackbox (Aucune clé) ;
 
