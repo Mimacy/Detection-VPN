@@ -9,10 +9,10 @@ $ip = gethostbyname($_SERVER["REMOTE_ADDR"]);
  curl_close($ch);
 
 if($result == '0'){
- echo "IP résidentielle / non classifiée (c'est-à-dire Safe IP)";
+ echo "IP rÃ©sidentielle / non classifiÃ©e (c'est-Ã -dire Safe IP)";
 }
 else if($result == '1'){
- echo "Détection d'un VPN ou PROXY ou VPS ou Serveur dédié ou hébergeur hosting...";
+ echo "DÃ©tection d'un VPN ou PROXY ou VPS ou Serveur dÃ©diÃ© ou hÃ©bergeur hosting...";
 }
 else {
  echo "Connexion inconnue";
